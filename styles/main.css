@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 120px 10vw;
+}
+
+/* HERO */
+#hero {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.galaxy {
+  position: absolute;
+  inset: 0;
+  background: url("../assets/galaxy.jpg") center/cover no-repeat;
+  transform: scale(1.2);
+  z-index: -1;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 800;
+}
+
+.hero-sub {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 75vh;
+}
+
+/* ABOUT */
+#about p {
+  font-size: 1.3rem;
+  max-width: 700px;
+}
+
+.chips {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.chips span {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* PROJECTS */
+#projects h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.project {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 18px;
+  transition: transform .4s, box-shadow .4s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+}
+
+.project img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* PHILOSOPHY */
+#philosophy {
+  text-align: center;
+  font-size: 2rem;
+  opacity: .85;
+}
+
+/* SOCIALS */
+#socials {
+  position: relative;
+  padding-bottom: 160px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 14px 0;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.08);
+  text-decoration: none;
+  color: white;
+  transition: transform .3s, background .3s;
+}
+
+.social:hover {
+  transform: translateX(10px);
+  background: rgba(255,255,255,0.15);
+}

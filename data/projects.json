@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "name": "EmberStone SMP",
+      "description": "Cinematic Minecraft SMP with custom systems.",
+      "link": "#",
+      "logo": "emberstone.png"
+    },
+    {
+      "name": "DemonMC Network",
+      "description": "Multi-server Minecraft network infrastructure.",
+      "link": "#",
+      "logo": "demonmc.png"
+    },
+    {
+      "name": "Circle Chat",
+      "description": "Dynamic chat system with persistent storage.",
+      "link": "#",
+      "logo": "circle.png"
+    }
+  ]
+}

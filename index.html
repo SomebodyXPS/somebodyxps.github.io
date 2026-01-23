@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SomebodyXPS Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SomebodyXPS</title>
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section id="hero">
-    <div class="hero-content">
-      <h1>Hello, I'm <span class="animated-text">SomebodyXPS</span></h1>
-      <p>Web Developer & Designer</p>
-      <div class="scroll-down">&#8595;</div>
-    </div>
+    <div class="galaxy"></div>
+
+    <h1 class="hero-title">SomebodyXPS</h1>
+    <p class="hero-sub">Vibe Coder · Creative Technologist</p>
+
+    <img src="assets/hero.png" alt="SomebodyXPS" class="hero-image" />
   </section>
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="assets/profile.jpg" alt="Profile Picture">
-      <p>
-        I'm SomebodyXPS, a passionate developer creating web experiences with custom animations and interactive designs. I love crafting responsive, modern, and engaging websites.
-      </p>
+    <p>
+      I design immersive systems, cinematic interfaces, and interactive
+      experiences that feel alive — not templated.
+    </p>
+
+    <div class="chips">
+      <span>Web</span>
+      <span>Design</span>
+      <span>Systems</span>
+      <span>Minecraft</span>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-container">
-      <div class="skill">
-        <p>HTML</p>
-        <div class="skill-bar"><div class="fill" style="width: 90%"></div></div>
-      </div>
-      <div class="skill">
-        <p>CSS</p>
-        <div class="skill-bar"><div class="fill" style="width: 85%"></div></div>
-      </div>
-      <div class="skill">
-        <p>JavaScript</p>
-        <div class="skill-bar"><div class="fill" style="width: 80%"></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="assets/project1.png" alt="Project 1">
-        <h3>Project One</h3>
-        <p>Animated one-page web app demo.</p>
-      </div>
-      <div class="project-card">
-        <img src="assets/project2.png" alt="Project 2">
-        <h3>Project Two</h3>
-        <p>Interactive portfolio site with scroll animations.</p>
-      </div>
-    </div>
+    <div id="projects-grid"></div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:somebodyxps@example.com">somebodyxps@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/somebodyxps">github.com/somebodyxps</a></p>
+  <!-- PHILOSOPHY -->
+  <section id="philosophy">
+    <p>I don’t follow templates — I build systems.</p>
   </section>
 
-  <script src="script.js"></script>
+  <!-- SOCIALS -->
+  <section id="socials">
+    <a href="https://github.com/SomebodyXPS" target="_blank" class="social">
+      <i data-lucide="github"></i> GitHub — @SomebodyXPS
+    </a>
+
+    <a href="https://discord.com/users/1278639046763221024" target="_blank" class="social">
+      <i data-lucide="message-circle"></i> Discord — SomebodyXPS
+    </a>
+
+    <a href="https://x.com/somebodyxps" target="_blank" class="social">
+      <i data-lucide="twitter"></i> Twitter — @somebodyxps
+    </a>
+
+    <a href="https://www.instagram.com/imh4s4n" target="_blank" class="social">
+      <i data-lucide="instagram"></i> Instagram — @imh4s4n
+    </a>
+
+    <a href="https://twitch.tv/somebodyxps" target="_blank" class="social">
+      <i data-lucide="twitch"></i> Twitch — somebodyxps
+    </a>
+
+    <a href="mailto:somebodyxps@gmail.com" class="social">
+      <i data-lucide="mail"></i> Email — somebodyxps@gmail.com
+    </a>
+  </section>
+
+  <script src="scripts/smoothScroll.js"></script>
+  <script src="scripts/heroScroll.js"></script>
+  <script src="scripts/projects.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
