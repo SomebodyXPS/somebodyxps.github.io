@@ -1,18 +1,23 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-body {
+/* ROOT */
+html, body {
+  height: 100%;
   background: #000;
   color: #fff;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
+/* SECTIONS - optimized spacing */
 section {
-  padding: 120px 10vw;
+  padding: 80px 10vw; /* smaller padding for tighter spacing */
 }
 
 /* HERO */
@@ -21,42 +26,57 @@ section {
   height: 100vh;
   text-align: center;
   overflow: hidden;
-}
-
-.galaxy {
-  position: absolute;
-  inset: 0;
-  background: url("../assets/galaxy.jpg") center/cover no-repeat;
-  transform: scale(1.2);
-  z-index: -1;
+  background: radial-gradient(circle at top, #0a0a0a 0%, #000 65%);
+  padding-bottom: 40px; /* reduce bottom padding for tighter scroll */
 }
 
 .hero-title {
   font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .hero-sub {
   opacity: 0.7;
   margin-top: 10px;
+  font-size: 1.05rem;
 }
 
-.hero-image {
+/* HERO AVATAR - BIGGER */
+.hero-avatar {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  max-height: 75vh;
+  width: 240px;
+  height: 240px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;                  /* circle */
+  object-fit: cover;                   /* fills circle nicely */
+  border: 3px solid rgba(255,255,255,0.8); /* white border */
+  box-shadow: 0 8px 20px rgba(255,255,255,0.2); /* subtle glow */
+  position: relative;
+  z-index: 1;
 }
 
 /* ABOUT */
+#about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 #about p {
   font-size: 1.3rem;
-  max-width: 700px;
+  max-width: 720px;
+  line-height: 1.6;
 }
 
 .chips {
-  margin-top: 20px;
+  margin-top: 24px;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
@@ -64,51 +84,62 @@ section {
 
 .chips span {
   padding: 8px 14px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.9rem;
 }
 
 /* PROJECTS */
+#projects {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 #projects h2 {
   font-size: 3rem;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
 }
 
 #projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
+  gap: 28px;
 }
 
 .project {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 18px;
-  transition: transform .4s, box-shadow .4s;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 22px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .project:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
 .project img {
   width: 64px;
   height: 64px;
   object-fit: contain;
+  margin-bottom: 14px;
 }
 
 /* PHILOSOPHY */
 #philosophy {
   text-align: center;
-  font-size: 2rem;
-  opacity: .85;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  opacity: 0.85;
+  padding: 60px 10vw;
 }
 
-/* SOCIALS */
+/* SOCIALS (END SCROLL CLEAN) */
 #socials {
-  position: relative;
-  padding-bottom: 160px;
+  padding-top: 60px;
+  padding-bottom: 40px; /* tight end scroll */
 }
 
 .social {
@@ -116,15 +147,32 @@ section {
   align-items: center;
   gap: 16px;
   margin: 14px 0;
-  padding: 18px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.08);
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
   text-decoration: none;
-  color: white;
-  transition: transform .3s, background .3s;
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .social:hover {
   transform: translateX(10px);
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 6vw;
+  }
+
+  .hero-avatar {
+    width: 180px;
+    height: 180px;
+    bottom: 16px;
+  }
+
+  #projects h2 {
+    font-size: 2.4rem;
+  }
 }

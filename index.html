@@ -8,19 +8,20 @@
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/animations.css" />
 
-  <!-- Icons -->
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="galaxy"></div>
-
     <h1 class="hero-title">SomebodyXPS</h1>
     <p class="hero-sub">Vibe Coder · Creative Technologist</p>
 
-    <img src="assets/hero.png" alt="SomebodyXPS" class="hero-image" />
+    <!-- Circular Avatar -->
+    <div class="hero-avatar">
+      <img src="assets/me.png" alt="SomebodyXPS" class="avatar-img" />
+    </div>
   </section>
 
   <!-- ABOUT -->
@@ -35,6 +36,7 @@
       <span>Design</span>
       <span>Systems</span>
       <span>Minecraft</span>
+      <span>Discord</span>
     </div>
   </section>
 
@@ -49,7 +51,7 @@
     <p>I don’t follow templates — I build systems.</p>
   </section>
 
-  <!-- SOCIALS -->
+  <!-- SOCIALS (END SCROLL HERE) -->
   <section id="socials">
     <a href="https://github.com/SomebodyXPS" target="_blank" class="social">
       <i data-lucide="github"></i> GitHub — @SomebodyXPS
@@ -76,9 +78,12 @@
     </a>
   </section>
 
+  <!-- SCRIPTS -->
   <script src="scripts/smoothScroll.js"></script>
   <script src="scripts/heroScroll.js"></script>
   <script src="scripts/projects.js"></script>
-  <script>lucide.createIcons();</script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
